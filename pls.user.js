@@ -46,7 +46,7 @@ function setText(file, content) {
 function changeIndexText(content) {
     setText(
         core.codeEditorController._editorState.fileDict[getIndexFileKey()],
-        content
+        content,
     );
 }
 
@@ -57,7 +57,7 @@ unsafeWindow.startPls = (port) => {
     console.log('connect', socket);
     socket.emit(
         'fetchDeclaretion',
-        core.codeEditorController.serverDeclarations
+        core.codeEditorController.serverDeclarations,
     );
 
     socket.on('change', (content) => {

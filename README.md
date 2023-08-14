@@ -38,5 +38,5 @@ If you are scripting at /box3/foo/bar, you have to run `yarn start /box3/foo/bar
 `port` The port server listen. **Please use the same port in browser extension**  
 `entry` The code source entry  
 `dist` Generated code output  
-`watch` **(Optional)** If setted, will watch the target dictionary  
+`watch` If setted, will watch the target dictionary  
 `beforeBundle` **(Optional)** If setted, will run the command inside after watch dictionary change and before bundle

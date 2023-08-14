@@ -8,6 +8,10 @@ export interface PlsConfig {
     mapId: string;
     port: number;
     entry: string;
+    dist: string;
+    watch: string;
+    beforeBundle?: string;
+    type: 'module' | 'script';
 }
 
 export async function getConfig(): Promise<PlsConfig> {
