@@ -15,7 +15,7 @@ const defaultConfig = {
   input: './src/main.ts',
   output: {
     file: './dist/main.js',
-    format: 'cjs',
+    format: 'umd',
     banner: '#!/usr/bin/env node',
     globals
   },
