@@ -5,7 +5,7 @@ Scripting box3 pro code in local
 ## Install
 
 ```bash
-yarn global add pls
+yarn global add pro-local-scripting
 ```
 
 ## Use
