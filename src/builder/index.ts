@@ -15,12 +15,16 @@ async function packAndDeploy(config: PlsConfig, basePath: string, io: Server) {
 function fileChange(config: PlsConfig, basePath: string, io: Server) {
     console.log(chalk.gray('[*] Watch file changed'));
     if (config.beforeBundle) {
-        exec(config.beforeBundle, async (err, stdout, stderr) => {
-            if (err) throw err;
-            if (stdout) console.log(stdout);
-            if (stderr) console.error(stderr);
-            packAndDeploy(config, basePath, io);
-        });
+        exec(
+            `cd ${getScriptPath()} && ${config.beforeBundle}`,
+            async (err, stdout, stderr) => {
+                if (err) throw err;
+                if (stdout) console.log(stdout);
+                if (stderr) console.error(stderr);
+                packAndDeploy(config, basePath, io);
+            },
+        );
+        return;
     }
     packAndDeploy(config, basePath, io);
 }

@@ -1,6 +1,6 @@
 import { PlsConfig } from '../config';
 
-import babylon from 'babylon';
+import { parse } from 'babylon';
 import traverse from 'babel-traverse';
 import { transformFromAst } from 'babel-core';
 import fs from 'fs';
@@ -20,7 +20,7 @@ interface Asset {
 
 function getFileAst(path: string, sourceType: string) {
     const content = fs.readFileSync(path).toString();
-    var ast = babylon.parse(content, {
+    var ast = parse(content, {
         sourceType: sourceType == 'module' ? 'module' : 'script',
     });
     return ast;

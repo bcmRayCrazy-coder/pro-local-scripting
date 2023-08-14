@@ -14,7 +14,7 @@ let core;
 Object.defineProperty(Object.prototype, 'permissionController', {
     get: () => core,
     set(v) {
-        core = this.permissionController;
+        core = this;
         delete Object.prototype.permissionController;
     },
     configurable: true,

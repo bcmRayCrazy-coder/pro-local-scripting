@@ -18,6 +18,13 @@ yarn start <scripting dictionary>
 
 If you are scripting at /box3/foo/bar, you have to run `yarn start /box3/foo/bar`
 
+## Browser
+
+Install `pls.user.js` GM script to your Tampermonkey  
+Join map `https://view.dao3.fun/e/{mapId}` and join in the game  
+Press `F12` and open `console`  
+Run `startPls(port in your config)`
+
 ## Configure
 
 -   Create `pls.json`
