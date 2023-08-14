@@ -49,7 +49,7 @@ export default async function bundle(config: PlsConfig, basePath: string) {
             fs.readFileSync(toLocalFilename(filename)).toString(),
             {
                 presets: ['env'],
-            }
+            },
         );
         if (!transformResult)
             throw new Error('Cannot parse ast at ' + filename);

@@ -5,18 +5,16 @@ Scripting box3 pro code in local
 ## Install
 
 ```bash
-git clone https://github.com/bcmRayCrazy-coder/pro-local-scripting.git
-cd pro-local-scripting
-yarn
+yarn global add pls
 ```
 
 ## Use
 
 ```bash
-yarn start <scripting dictionary>
+pls <scripting-dictionary>
 ```
 
-If you are scripting at /box3/foo/bar, you have to run `yarn start /box3/foo/bar`
+If you are scripting at /box3/foo/bar, you have to run `pls /box3/foo/bar`
 
 ## Browser
 
@@ -42,10 +40,10 @@ Run `startPls(port in your config)`
 }
 ```
 
-- `mapId` The id of your map (Like <https://dao3.fun/edit/bdb29e0f7060a56dfa1e> belongs to `bdb29e0f7060a56dfa1e`)  
-- `port` The port server listen. **Please use the same port in browser extension**  
-- `entry` The code source entry  
-- `dist` Generated code output  
-- `watch` If setted, will watch the target dictionary  
-- `beforeBundle` **(Optional)** If setted, will run the command inside after watch dictionary change and before bundle  
-- `type` **(Optional)** Your code is `module` or `script`  
+-   `mapId` The id of your map (Like <https://dao3.fun/edit/bdb29e0f7060a56dfa1e> belongs to `bdb29e0f7060a56dfa1e`)
+-   `port` The port server listen. **Please use the same port in browser extension**
+-   `entry` The code source entry
+-   `dist` Generated code output
+-   `watch` If setted, will watch the target dictionary
+-   `beforeBundle` **(Optional)** If setted, will run the command inside after watch dictionary change and before bundle
+-   `type` **(Optional)** Your code is `module` or `script`
