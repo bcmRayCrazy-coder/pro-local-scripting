@@ -1,1 +1,3 @@
-console.log("hello pls!")
+import { greet } from "./log";
+
+greet();

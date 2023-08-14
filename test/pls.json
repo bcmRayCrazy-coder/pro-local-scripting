@@ -4,5 +4,6 @@
     "entry":"dist/index.js",
     "dist": "out.js",
     "watch":"src",
-    "beforeBundle":"tsc"
+    "beforeBundle":"tsc",
+    "type":"module"
 }

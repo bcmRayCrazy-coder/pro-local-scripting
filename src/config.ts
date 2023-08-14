@@ -15,9 +15,10 @@ export interface PlsConfig {
 }
 
 export async function getConfig(): Promise<PlsConfig> {
-    const config: PlsConfig = JSON.parse(
-        (await readFile(path.join(scriptPath, 'pls.json'))).toString(),
+    var config: PlsConfig = JSON.parse(
+        (await readFile(path.join(scriptPath, 'pls.json'))).toString()
     );
+    if(!config.type) config.type = 'script';
     return config;
 }
 

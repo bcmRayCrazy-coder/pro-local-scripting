@@ -37,13 +37,15 @@ Run `startPls(port in your config)`
     "entry": "/foo/bar/src/index.js",
     "dist": "/foo/bar/out.js",
     "watch": "/foo/bar/src",
-    "beforeBundle": "tsc"
+    "beforeBundle": "tsc",
+    "type": "script"
 }
 ```
 
-`mapId` The id of your map (Like <https://dao3.fun/edit/bdb29e0f7060a56dfa1e> belongs to `bdb29e0f7060a56dfa1e`)  
-`port` The port server listen. **Please use the same port in browser extension**  
-`entry` The code source entry  
-`dist` Generated code output  
-`watch` If setted, will watch the target dictionary  
-`beforeBundle` **(Optional)** If setted, will run the command inside after watch dictionary change and before bundle
+- `mapId` The id of your map (Like <https://dao3.fun/edit/bdb29e0f7060a56dfa1e> belongs to `bdb29e0f7060a56dfa1e`)  
+- `port` The port server listen. **Please use the same port in browser extension**  
+- `entry` The code source entry  
+- `dist` Generated code output  
+- `watch` If setted, will watch the target dictionary  
+- `beforeBundle` **(Optional)** If setted, will run the command inside after watch dictionary change and before bundle  
+- `type` **(Optional)** Your code is `module` or `script`  
