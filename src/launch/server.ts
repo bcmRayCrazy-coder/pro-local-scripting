@@ -56,6 +56,11 @@ function launchServer(port: number, mapId: string): Promise<void> {
 
         http.listen(port, () => {
             console.log(chalk.gray(`[i] Local server run on port ${port}.`));
+            console.log(
+                chalk.gray(
+                    '[i] You can install browser GM extension at https://unpkg.com/pro-local-scripting/',
+                ),
+            );
             res();
         });
     });
