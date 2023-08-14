@@ -27,6 +27,6 @@ unsafeWindow.startPls = (port) => {
     console.log('connect', socket);
     socket.emit(
         'fetchDeclaretion',
-        core.codeEditorController.serverDeclarations
+        core.codeEditorController.serverDeclarations,
     );
 };

@@ -28,8 +28,8 @@ function launchServer(port: number, mapId: string): Promise<void> {
                 socket.disconnect();
                 return console.warn(
                     chalk.yellow(
-                        `[!] Map(${auth.mapId}) tried to connect but reject.`
-                    )
+                        `[!] Map(${auth.mapId}) tried to connect but reject.`,
+                    ),
                 );
             }
 

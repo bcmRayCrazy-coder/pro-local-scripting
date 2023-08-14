@@ -1,5 +1,5 @@
-import chalk from "chalk";
+import chalk from 'chalk';
 
-export default function disconnect(){
+export function disconnect() {
     console.log(chalk.gray('[i] Disconnected'));
 }
