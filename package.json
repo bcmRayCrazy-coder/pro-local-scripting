@@ -1,13 +1,13 @@
 {
     "name": "pro-local-scripting",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "description": "Scripting box3 pro code in local",
     "main": "pls.user.js",
     "repository": "https://github.com/bcmRayCrazy-coder/pro-local-scripting.git",
     "author": "bcm-ray_crazy <65066644+bcmRayCrazy-coder@users.noreply.github.com>",
     "license": "LGPL-3.0-or-later",
     "bin": {
-        "pls": "./dist/main.js"
+        "pls": "./dist/main.cjs"
     },
     "man": "./man/doc.1",
     "scripts": {
