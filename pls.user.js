@@ -20,6 +20,36 @@ Object.defineProperty(Object.prototype, 'permissionController', {
     configurable: true,
 });
 
+function getIndexFileKey() {
+    const dict = core.codeEditorController._editorState.fileDict;
+    for (const key in dict) {
+        if (Object.hasOwnProperty.call(dict, key)) {
+            const fileMeta = dict[key];
+            if (fileMeta.name == 'index.js') return key;
+        }
+    }
+}
+
+function deleteText(length, offset = 0) {
+    core.codeEditorController._deleteText(offset, length);
+}
+
+function insertText(text, offset = 0) {
+    core.codeEditorController._insertText(offset, text);
+}
+
+function setText(file, content) {
+    deleteText(file.text.length);
+    insertText(content);
+}
+
+function changeIndexText(content) {
+    setText(
+        core.codeEditorController._editorState.fileDict[getIndexFileKey()],
+        content
+    );
+}
+
 unsafeWindow.startPls = (port) => {
     const socket = io('ws://localhost:' + port, {
         auth: { mapId: unsafeWindow.location.pathname.split('/')[2] },
@@ -27,6 +57,10 @@ unsafeWindow.startPls = (port) => {
     console.log('connect', socket);
     socket.emit(
         'fetchDeclaretion',
-        core.codeEditorController.serverDeclarations,
+        core.codeEditorController.serverDeclarations
     );
+
+    socket.on('change', (content) => {
+        changeIndexText(content);
+    });
 };
