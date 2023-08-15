@@ -1,3 +1,1 @@
-import { greet } from "./log";
-
-greet();
+console.log("Hello world!");

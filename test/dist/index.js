@@ -1,2 +1,2 @@
-import { greet } from "./log";
-greet();
+"use strict";
+console.log("Hello world!");

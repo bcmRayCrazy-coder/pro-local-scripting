@@ -1743,6 +1743,22 @@ private@^0.1.6:
   resolved "https://registry.npmmirror.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
   integrity sha512-VvivMrbvd2nKkiG38qjULzlc+4Vx4wm/whI9pQD35YrARNnhxeiRktSOhSukRLFNlzg6Br/cJPet5J/u19r/mg==
 
+pro-local-scripting@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.npmjs.org/pro-local-scripting/-/pro-local-scripting-1.1.5.tgz#001a7e7ef4cec4ac68e947a337ab22b77fb98762"
+  integrity sha512-YdYfIvd3ValjXFXsucgLfbyNQD/0l8TH6EjO/QrVv6sEBXlx6uyhEdYijFaIILquTYg/uNdBKs7Y/2bjxzanNg==
+  dependencies:
+    "@babel/core" "^7.22.10"
+    "@babel/traverse" "^7.22.10"
+    "@putout/minify" "^1.49.0"
+    babel-preset-env "^1.7.0"
+    chalk "4"
+    chokidar "^3.5.3"
+    commander "^11.0.0"
+    express "^4.18.2"
+    fs-extra "^11.1.1"
+    socket.io "^4.7.2"
+
 proxy-addr@~2.0.7:
   version "2.0.7"
   resolved "https://registry.npmmirror.com/proxy-addr/-/proxy-addr-2.0.7.tgz#f19fe69ceab311eeb94b42e70e8c2070f9ba1025"
@@ -1847,13 +1863,6 @@ rollup-plugin-typescript2@^0.35.0:
     fs-extra "^10.0.0"
     semver "^7.3.7"
     tslib "^2.4.0"
-
-rollup@^3.28.0:
-  version "3.28.0"
-  resolved "https://registry.npmmirror.com/rollup/-/rollup-3.28.0.tgz#a3c70004b01934760c0cb8df717c7a1d932389a2"
-  integrity sha512-d7zhvo1OUY2SXSM6pfNjgD5+d0Nz87CUp4mt8l/GgVP3oBsPwzNvSzyu1me6BSG9JIgWNTVcafIXBIyM8yQ3yw==
-  optionalDependencies:
-    fsevents "~2.3.2"
 
 safe-buffer@5.2.1, safe-buffer@^5.1.0:
   version "5.2.1"

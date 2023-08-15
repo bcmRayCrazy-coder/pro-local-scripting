@@ -1,18 +1,13 @@
 {
     "compilerOptions": {
-        "target": "ES2020",
-        // "module": "",  /*您tm自己觉得能是啥就是啥吧*/
+        "target": "ES2016",
+        "module": "CommonJS",
         "rootDir": "./src",
         "outDir": "./dist",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        "strict": false,
+        "strict": true,
         "skipLibCheck": true,
-        "moduleResolution": "NodeNext",
-        "baseUrl": "./",
-        "paths": {
-            "~/*": ["*"]
-        }
     },
     "include": ["./src/**/*.ts", "./src/**/*.d.ts"],
     "exclude": ["./node_modules"]
