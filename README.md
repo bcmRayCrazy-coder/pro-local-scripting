@@ -37,7 +37,8 @@ Run `startPls(port in your config)`
     "watch": "/foo/bar/src",
     "beforeBundle": "tsc",
     "type": "script",
-    "banner": "// Pack by Pro Local Scripting"
+    "banner": "// Pack by Pro Local Scripting",
+    "autoFetchDeclare": true
 }
 ```
 
@@ -49,3 +50,4 @@ Run `startPls(port in your config)`
 -   `beforeBundle` **(Optional)** If setted, will run the command inside after watch dictionary change and before bundle
 -   `type` **(Optional)** Your code is `module` or `script`
 -   `banner` **(Optional)** The banner at the top of your code
+-   `autoFetchDeclare` **(Optional)** Will fetch declare file automatically

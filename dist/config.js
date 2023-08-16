@@ -23,6 +23,8 @@ function getConfig() {
             config.type = 'script';
         if (!config.banner)
             config.banner = '';
+        if (!config.autoFetchDeclare)
+            config.autoFetchDeclare = true;
         return config;
     });
 }

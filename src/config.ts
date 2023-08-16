@@ -13,6 +13,7 @@ export interface PlsConfig {
     beforeBundle?: string;
     type: 'module' | 'script';
     banner: string;
+    autoFetchDeclare: boolean;
 }
 
 export async function getConfig(): Promise<PlsConfig> {
@@ -21,6 +22,7 @@ export async function getConfig(): Promise<PlsConfig> {
     );
     if (!config.type) config.type = 'script';
     if (!config.banner) config.banner = '';
+    if (!config.autoFetchDeclare) config.autoFetchDeclare = true;
     return config;
 }
 
