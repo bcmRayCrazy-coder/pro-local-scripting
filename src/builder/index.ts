@@ -11,7 +11,6 @@ async function packAndDeploy(config: PlsConfig, basePath: string, io: Server) {
     await bundle(config, basePath);
     console.log(chalk.gray('[+] Code bundled'));
     var code = (await readFile(path.join(basePath, config.dist))).toString();
-    console.log(code);
     io.emit('change', code);
 }
 
