@@ -21,7 +21,7 @@ const config_1 = require("./config");
 const commander_1 = require("commander");
 commander_1.program
     .name('Pro Local Scripting')
-    .version('1.0.0')
+    .version('1.2')
     .argument('<scripting-dictionary>')
     .action((scriptPath) => {
     (0, config_1.setScriptPath)(scriptPath);

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Pro Local Scripting
-// @version      1.0.0
+// @version      1.2
 // @description  在本地编写Pro代码
 // @author       bcmray_crazy
 // @match        https://view.dao3.fun/e/*

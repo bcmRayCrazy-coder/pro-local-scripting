@@ -1,6 +1,6 @@
 {
     "name": "pro-local-scripting",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "description": "Scripting box3 pro code in local",
     "main": "pls.user.js",
     "repository": "https://github.com/bcmRayCrazy-coder/pro-local-scripting.git",
