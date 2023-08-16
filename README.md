@@ -36,7 +36,8 @@ Run `startPls(port in your config)`
     "dist": "/foo/bar/out.js",
     "watch": "/foo/bar/src",
     "beforeBundle": "tsc",
-    "type": "script"
+    "type": "script",
+    "banner": "// Pack by Pro Local Scripting"
 }
 ```
 
@@ -47,3 +48,4 @@ Run `startPls(port in your config)`
 -   `watch` If setted, will watch the target dictionary
 -   `beforeBundle` **(Optional)** If setted, will run the command inside after watch dictionary change and before bundle
 -   `type` **(Optional)** Your code is `module` or `script`
+-   `banner` **(Optional)** The banner at the top of your code

@@ -21,6 +21,8 @@ function getConfig() {
         var config = JSON.parse((yield (0, promises_1.readFile)(path_1.default.join(scriptPath, 'pls.json'))).toString());
         if (!config.type)
             config.type = 'script';
+        if (!config.banner)
+            config.banner = '';
         return config;
     });
 }

@@ -11,11 +11,11 @@
 // ==/UserScript==
 
 let core;
-Object.defineProperty(Object.prototype, 'permissionController', {
+Object.defineProperty(Object.prototype, 'codeEditorController', {
     get: () => core,
     set(v) {
         core = this;
-        delete Object.prototype.permissionController;
+        delete Object.prototype.codeEditorController;
     },
     configurable: true,
 });
@@ -30,6 +30,8 @@ function getIndexFileKey() {
     }
 }
 
+function setCursorDict() {}
+
 function deleteText(length, offset = 0) {
     core.codeEditorController._deleteText(offset, length);
 }
@@ -39,7 +41,7 @@ function insertText(text, offset = 0) {
 }
 
 function setText(file, content) {
-    deleteText(file.text.length);
+    deleteText(file.text.length || 1);
     insertText(content);
 }
 

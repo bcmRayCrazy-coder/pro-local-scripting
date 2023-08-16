@@ -12,6 +12,7 @@ export interface PlsConfig {
     watch: string;
     beforeBundle?: string;
     type: 'module' | 'script';
+    banner: string;
 }
 
 export async function getConfig(): Promise<PlsConfig> {
@@ -19,6 +20,7 @@ export async function getConfig(): Promise<PlsConfig> {
         (await readFile(path.join(scriptPath, 'pls.json'))).toString(),
     );
     if (!config.type) config.type = 'script';
+    if (!config.banner) config.banner = '';
     return config;
 }
 
