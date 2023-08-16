@@ -25,7 +25,6 @@ function packAndDeploy(config, basePath, io) {
         yield (0, bundle_1.default)(config, basePath);
         console.log(chalk_1.default.gray('[+] Code bundled'));
         var code = (yield (0, promises_1.readFile)(path_1.default.join(basePath, config.dist))).toString();
-        console.log(code);
         io.emit('change', code);
     });
 }
