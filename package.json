@@ -1,6 +1,6 @@
 {
     "name": "pro-local-scripting",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "description": "Scripting box3 pro code in local",
     "main": "pls.user.js",
     "repository": "https://github.com/bcmRayCrazy-coder/pro-local-scripting.git",
@@ -9,7 +9,6 @@
     "bin": {
         "pls": "./dist/main.js"
     },
-    "man": "./man/doc.1",
     "scripts": {
         "test": "ts-node src/main.ts",
         "start": "node dist/main.ts",
