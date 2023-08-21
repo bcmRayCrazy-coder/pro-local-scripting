@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Pro Local Scripting
-// @version      1.2
+// @version      1.3
 // @description  在本地编写Pro代码
 // @author       bcmray_crazy
 // @match        https://view.dao3.fun/e/*
@@ -9,6 +9,9 @@
 // @grant        unsafeWindow
 // @require      https://cdn.socket.io/4.4.1/socket.io.min.js
 // ==/UserScript==
+
+// DO NOT CHANGE IF YOU DONT WANT TO CAUSE ANY BUGS!!!
+const clientVersion = '1.3';
 
 let core;
 Object.defineProperty(Object.prototype, 'codeEditorController', {
@@ -48,7 +51,7 @@ function setText(file, content) {
 function changeIndexText(content) {
     setText(
         core.codeEditorController._editorState.fileDict[getIndexFileKey()],
-        content,
+        content
     );
 }
 
@@ -57,9 +60,16 @@ unsafeWindow.startPls = (port) => {
         auth: { mapId: unsafeWindow.location.pathname.split('/')[2] },
     });
     console.log('connect', socket);
+    socket.on('version', (serverVersion) => {
+        if (serverVersion != clientVersion) {
+            console.warn('pls version is not same at browser and server!');
+        }
+    });
+
+    socket.emit('checkVersion');
     socket.emit(
         'fetchDeclaretion',
-        core.codeEditorController.serverDeclarations,
+        core.codeEditorController.serverDeclarations
     );
 
     socket.on('change', (content) => {

@@ -4,10 +4,11 @@ import { launchServer } from './launch/server';
 import { checkFiles } from './launch/check';
 import { getConfig, setScriptPath } from './config';
 import { program } from 'commander';
+import version from './version';
 
 program
     .name('Pro Local Scripting')
-    .version('1.2')
+    .version(version)
     .argument('<scripting-dictionary>')
     .action((scriptPath) => {
         setScriptPath(scriptPath);
